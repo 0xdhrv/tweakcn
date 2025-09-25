@@ -67,6 +67,23 @@
   border-color: var(--color-border);
 }
 
+/* Theme preview isolation */
+.theme-preview-isolated {
+  /* Reset inherited styles */
+}
+
+.theme-preview-isolated * {
+  /* Override global border-color for all elements in preview */
+  border-color: var(--border) !important;
+}
+
+/* Reset border colors for theme preview containers to allow them to use their own theme variables */
+.theme-preview-isolated *,
+.theme-preview-isolated *:before,
+.theme-preview-isolated *:after {
+  border-color: initial;
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
